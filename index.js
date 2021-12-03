@@ -36,10 +36,10 @@ const { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocat
 
 
 
-nextISSTimesForMyLocation((error, passTimes) => {
-  if (error) {
-    return console.log("It didn't work!", error);
-  }
+printPassTimes((passTimes) => {
+  // if (error) {
+  //   return console.log("It didn't work!", error);
+  // }
 
 
   // success, print out the deets!
@@ -65,3 +65,5 @@ nextISSTimesForMyLocation((error, passTimes) => {
 
 
 // fetchCoordsByIP('70.31.47.171') // this will call the fx twice
+
+module.exports = { printPassTimes };
